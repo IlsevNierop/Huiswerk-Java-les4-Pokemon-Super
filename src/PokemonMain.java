@@ -9,7 +9,9 @@ public class PokemonMain {
 
         GrassPokemon g1 = new GrassPokemon("Bounsweet", 80, 0, 0, " expels pollen", " expels dirty smell", 8.4, 3.9, 109, "blue");
 
-        WaterPokemon w1 = new WaterPokemon("Latias", 80, 0, 0, " creates a Tsunami", " throws water back", 8.4, 3.9, 83, "black");
+        WaterPokemon w1 = new WaterPokemon("Latias", 80, 0, 0, " creates a Tsunami", " throws water back", 7.5, 5.2, 83, "black");
+
+        PokemonSuper f1 = new FirePokemon("Tsareena", 80, 0, 0, " spits out fire", " ignites a lucifer", 10.3, 2.8, "mouth", 25);
 
         e1.eats("electrons");
         e1.pound(g1);
@@ -17,6 +19,8 @@ public class PokemonMain {
         e1.pound(g1);
 
         w1.pound(e1);
+
+        f1.scratch(w1);
 
     }
 }

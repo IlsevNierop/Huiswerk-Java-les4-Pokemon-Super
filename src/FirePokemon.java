@@ -6,7 +6,7 @@ public class FirePokemon extends PokemonSuper{
 
     private int sizeFire;
 
-    public FirePokemon(String name, int hp, int level, int xp, String attack, String defence, double height, double weight, String locationFire, String color, int sizeFire) {
+    public FirePokemon(String name, int hp, int level, int xp, String attack, String defence, double height, double weight, String locationFire, int sizeFire) {
         super(name, hp, level, xp, attack, defence, height, weight);
         this.locationFire = locationFire;
         this.sizeFire = sizeFire;
