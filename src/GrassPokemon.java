@@ -36,6 +36,9 @@ public class GrassPokemon extends PokemonSuper {
 
     @Override
     void pound(PokemonSuper a) {
+        System.out.println(" check health points before " + a.getHp());
+        System.out.println(this.getName() + this.getAttack() + " and tries to cause damage to " + a.getName());
+        System.out.println(a.getName() + a.getDefence() + " and doesn't get any damage done by " + this.getName());
 
     }
 }

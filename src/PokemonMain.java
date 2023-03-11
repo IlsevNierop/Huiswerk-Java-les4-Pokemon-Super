@@ -9,10 +9,14 @@ public class PokemonMain {
 
         GrassPokemon g1 = new GrassPokemon("Bounsweet", 80, 0, 0, " expels pollen", " expels dirty smell", 8.4, 3.9, 109, "blue");
 
+        WaterPokemon w1 = new WaterPokemon("Latias", 80, 0, 0, " creates a Tsunami", " throws water back", 8.4, 3.9, 83, "black");
+
         e1.eats("electrons");
         e1.pound(g1);
         e1.scratch(g1);
         e1.pound(g1);
+
+        w1.pound(e1);
 
     }
 }
