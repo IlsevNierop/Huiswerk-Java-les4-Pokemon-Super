@@ -37,6 +37,52 @@ public class ElectricPokemon extends PokemonSuper{
         a.setHp((a.getHp() - 3));
 
         System.out.println(a.getName() + " now has " + a.getHp() + " health points.");
+    }
+
+     public void thunderPunch(PokemonSuper b){
+        System.out.println(this.getName() + " punches " + b.getName() + " with his thunder.");
+        System.out.println(b.getName() + b.getDefence() + ".");
+
+
+        if (this.getLevel() >= b.getLevel()){
+            System.out.println("Unfortunately, " + b.getName() + " is not strong enough for " + this.getName() + ".");
+            if (this.getXp() >= b.getXp()){
+                b.setHp(b.getHp() - 8);
+                this.setXp(this.getXp() + 3);
+                System.out.println(b.getName() + " lost 8 health points. His current HPs are: " + b.getHp() + ".");
+                System.out.println(this.getName() + " gained experience points. He now has: " + this.getXp() );
+
+            }
+            else {
+                b.setHp(b.getHp() - 2);
+                this.setHp(this.getHp() -1);
+                System.out.println(b.getName() + " and " + this.getName() + " get into a fight. They lose some and none win some.");
+                System.out.println(b.getName() + " lost 2 health points. His current HPs are: " + b.getHp() + ".");
+                System.out.println(this.getName() + " lost 1 health point. His current HPs are: " + this.getHp() + ".");
+            }
+        }
+        else {
+            this.setHp(this.getHp() - 3);
+            b.setXp(b.getHp() + 1);
+            System.out.println("The opponent is too strong" + this.getName() + " lost.");
+        }
+
+        if (b.getHp() <= 0){
+            System.out.println(b.getName() + " is dead.");
+        }
+        if (this.getHp() <= 0) {
+            System.out.println(this.getName() + " is dead.");
+        }
+    }
+
+    public void electroBall(PokemonSuper c){
+        System.out.println(this.getName() + " throws an electro ball at " + c.getName() + ".");
+        if (c.getXp() >= 0){
+            c.setXp(c.getXp() - 1);
+            this.setXp(this.getXp() + 1);
+        }
+        System.out.println("The new experience points are: \n" + this.getName() + " " + this.getXp() + "\n" + c.getName() + " " + c.getXp());
 
     }
+
 }

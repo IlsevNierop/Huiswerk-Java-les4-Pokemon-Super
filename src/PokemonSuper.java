@@ -50,6 +50,11 @@ public abstract class PokemonSuper {
 
     }
 
+    public void recovers(){
+        this.setHp(this.getHp() + 3);
+        System.out.println(this.getName() + " is sleeping for 2 hours to recover from this stressful day. After this nice power nap, his health points are: " + this.getHp() + ".");
+    }
+
     public String getName() {
         return name;
     }
