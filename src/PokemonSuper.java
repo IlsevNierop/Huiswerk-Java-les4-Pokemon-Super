@@ -36,7 +36,6 @@ public abstract class PokemonSuper {
     }
 
     void scratch(PokemonSuper a) {
-       System.out.println("check hp a before scratch"+a.getHp());
         a.setHp((a.getHp()-1));
 
         System.out.println(this.getName() +" has just scratched "+ a.getName() + ". " + a.getName()+" now has "+a.getHp()+" health points.");

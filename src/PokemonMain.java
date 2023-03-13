@@ -40,6 +40,18 @@ public class PokemonMain {
 
         g1.leechSeed(f1);
 
+        w1.rainDance(e1);
+
+        w1.surf(g1);
+
+        e1.recovers();
+
+        f1.flameThrower(g1);
+
+        g1.recovers();
+
+        f1.pyroBall(e2);
+
 
 
 

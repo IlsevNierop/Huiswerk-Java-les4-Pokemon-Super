@@ -31,7 +31,6 @@ public class ElectricPokemon extends PokemonSuper{
 
     @Override
     void pound(PokemonSuper a) {
-        System.out.println("check health points before " + a.getHp());
         System.out.println(this.getName() + this.getAttack() + " and causes damage to " + a.getName());
 
         a.setHp((a.getHp() - 3));
@@ -41,7 +40,7 @@ public class ElectricPokemon extends PokemonSuper{
 
      public void thunderPunch(PokemonSuper b){
         System.out.println(this.getName() + " punches " + b.getName() + " with his thunder.");
-        System.out.println(b.getName() + b.getDefence() + ".");
+        System.out.println("As defence, " + b.getName() + b.getDefence() + ".");
 
 
         if (this.getLevel() >= b.getLevel()){
@@ -54,16 +53,16 @@ public class ElectricPokemon extends PokemonSuper{
 
             }
             else {
+                System.out.println("They have the same experience points, but not the same level. Therefore, both lose some and win some.");
                 b.setHp(b.getHp() - 2);
                 this.setHp(this.getHp() -1);
-                System.out.println(b.getName() + " and " + this.getName() + " get into a fight. They lose some and none win some.");
                 System.out.println(b.getName() + " lost 2 health points. His current HPs are: " + b.getHp() + ".");
                 System.out.println(this.getName() + " lost 1 health point. His current HPs are: " + this.getHp() + ".");
             }
         }
         else {
             this.setHp(this.getHp() - 3);
-            b.setXp(b.getHp() + 1);
+            b.setXp(b.getXp() + 1);
             System.out.println("The opponent is too strong" + this.getName() + " lost.");
         }
 

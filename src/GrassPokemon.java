@@ -36,7 +36,6 @@ public class GrassPokemon extends PokemonSuper {
 
     @Override
     void pound(PokemonSuper a) {
-        System.out.println(" check health points before " + a.getHp());
         System.out.println(this.getName() + this.getAttack() + " and tries to cause damage to " + a.getName());
         System.out.println(a.getName() + a.getDefence() + " and doesn't get any damage done by " + this.getName());
 
@@ -44,11 +43,11 @@ public class GrassPokemon extends PokemonSuper {
 
     public void leechSeed(PokemonSuper b){
         System.out.println(this.getName() + " has a lot of leeches in the grass. These leeches attack " + b.getName() + ".");
-        System.out.println(b.getName() + b.getDefence() + ".");
+        System.out.println("As defence, " + b.getName() + b.getDefence() + ".");
 
         if (this.getLevel() >= b.getLevel()){
-            System.out.println("Unfortunately, " + b.getName() + " is not strong enough and " + b.getName() + " looses the battle.");
             if (this.getXp() >= b.getXp()){
+                System.out.println("Unfortunately, " + b.getName() + " is not strong enough and " + b.getName() + " looses the battle.");
                 b.setHp(b.getHp() - 14);
                 this.setXp(this.getXp() + 5);
                 System.out.println(b.getName() + " lost 14 health points. His current HPs are: " + b.getHp() + ".");
@@ -56,16 +55,16 @@ public class GrassPokemon extends PokemonSuper {
 
             }
             else {
+                System.out.println("They have the same experience points, but not the same level. Therefore, both lose some and win some.");
                 b.setHp(b.getHp() - 2);
                 this.setHp(this.getHp() -4);
-                System.out.println(b.getName() + " and " + this.getName() + " get into a fight. They lose some and none win some.");
                 System.out.println(b.getName() + " lost 2 health points. His current HPs are: " + b.getHp() + ".");
                 System.out.println(this.getName() + " lost 4 health points. His current HPs are: " + this.getHp() + ".");
             }
         }
         else {
             this.setHp(this.getHp() - 3);
-            b.setXp(b.getHp() + 1);
+            b.setXp(b.getXp() + 1);
             System.out.println("The opponent is too strong" + this.getName() + " lost.");
         }
 
