@@ -2,7 +2,9 @@ package src;
 
 public class PokemonMain {
 
-    // Als een pokemon vecht - check wel type - een overruled de ander - check level - heeft ook invloed - en op basis daarvan wint een of niet. Als wint van level hoger - dan gaat automatisch level hoger. Bij elke win - krijgt xp - en na X xp's ook level hoger. Damage hangt af van verschil - hoeveel punten eraf. Weight heeft invloed op sommige methodes en Height ook invloed op sommige methodes
+    // Bonus 3: volgens mij kun je alleen 1 pokemon hebben met verschillende types - als de pokemon die eigenschappen inherit.
+    // Dus in dit geval zou dan bijvoorbeeld de ElectricPokemon 'boven' de FirePokemon kunnen staan, en inherit de FirePokemon van de Electric. Op die manier zou de FirePokemon ook een ElectricPokemon zijn.
+    // Zie hieronder bij e1 - deze is een PokemonSuper EN een ElectricPokemon.
     public static void main(String[] args) {
 
         PokemonSuper e1 = new ElectricPokemon("Cresselia", 80, 0, 0, " does a little dance", " ducks", 10.5, 5.9, 4, "finger");
